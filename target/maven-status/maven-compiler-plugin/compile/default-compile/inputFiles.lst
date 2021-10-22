@@ -1,0 +1,10 @@
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/service/LivroService.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/repository/LivroRepository.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/service/SegurancaServiceImpl.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/entity/Volume.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/entity/Livro.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/FrasesApplication.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/repository/AutorRepository.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/repository/VolumeRepository.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/entity/Autor.java
+/workspace/atividade1/src/main/java/br/gov/sp/fatec/frases/controller/LivroController.java
