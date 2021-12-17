@@ -9,10 +9,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
+import com.fasterxml.jackson.annotation.JsonView;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.JoinColumn;
+import br.gov.sp.fatec.frases.controller.View;
 
 @Entity
 @Table(name = "liv_livro")
@@ -21,21 +23,26 @@ public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="liv_id")
+    @JsonView(View.LivroCompleto.class)
     private long id;
 
     @Column(name="liv_titulo")
+    @JsonView(View.LivroComum.class)
     private String titulo;
 
     @Column(name="liv_isbn")
+    @JsonView(View.LivroComum.class)
     private long isbn;
 
     @Column(name="liv_editora")
+    @JsonView(View.LivroCompleto.class)
     private String editora;
     
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "lau_livro_autor",
-    joinColumns = { @JoinColumn(name = "liv_id") },
-    inverseJoinColumns = { @JoinColumn(name = "aur_id") }) 
+        joinColumns = { @JoinColumn(name = "liv_id") },
+        inverseJoinColumns = { @JoinColumn(name = "aur_id") }) 
+    @JsonView(View.LivroComum.class)
     private Set<Autor> autores;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "livro")
